@@ -66,7 +66,7 @@ qs('#sort').addEventListener('change', render);
 
 qs('#exportBtn').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(getState(), null, 2)], {type: 'application/json'});
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'vault.json'; a.click();
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'My-books-notes.json'; a.click();
 });
 
 qs('#importFile').addEventListener('change', e => {
