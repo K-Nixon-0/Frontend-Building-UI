@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tests</title>
+    </head>
+    <body>
+        <h1>Validator Unit Tests</h1>
+        <div id="res"></div>
+        <script type="module">
+            import {vTitle, vPages, vAdv} from './scripts/validators.js';
+            document.getElementById('res').innerHTML = `
+                <p>Title test: ${vTitle("Clean Code")}</p>
+                <p>Pages test: ${vPages("123")}</p>
+                <p>Advanced regex test: ${vAdv("test test")}</p>
+            `;
+        </script>
+    </body>
+</html>

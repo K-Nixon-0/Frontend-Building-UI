@@ -34,7 +34,7 @@ function render() {
     const cap = 5000;
     const liveMsg = qs('#liveMsg');
     if (totalPages > cap) {
-        liveMsg.setAttribute('aria-live', 'assertlive');
+        liveMsg.setAttribute('aria-live', 'assertive');
         liveMsg.innerText = `Overage! Exceeded page cap of ${cap} by ${totalPages - cap} pages.`;
     } else {
         liveMsg.setAttribute('aria-live', 'polite');
@@ -42,7 +42,7 @@ function render() {
     }
 }
 
-qs('#vaultForm').addEventListener('sebmit', e => {
+qs('#vaultForm').addEventListener('submit', e => {
     e.preventDefault();
     const [title, author, pages, tag, date] = Array.from(qsa('#vaultForm input')).map(i => i.value);
 
@@ -62,11 +62,11 @@ window.del = id => {
 };
 
 qs('#search').addEventListener('input', render);
-qs('sort').addEventListener('change', render);
+qs('#sort').addEventListener('change', render);
 
 qs('#exportBtn').addEventListener('click', () => {
-    const blob = new Blob([JSON.stringify(getState(), null, 2)], {type: 'json'});
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'vault.json'; a.click();
+    const blob = new Blob([JSON.stringify(getState(), null, 2)], {type: 'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'My-books-notes.json'; a.click();
 });
 
 qs('#importFile').addEventListener('change', e => {

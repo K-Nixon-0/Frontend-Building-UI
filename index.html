@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Book & Notes</title>
-        <link rel="stylessheet" href="styles/style.css">
-        <script type="module" src="scripts/ui.js"></script>
+        <link rel="stylesheet" href="./styles/style.css">
+        <script type="module" src="./scripts/ui.js"></script>
     </head>
 
     <body>
@@ -16,7 +16,7 @@
                 <input type="search" id="search" placeholder="Search ...">
                 <select id="sort">
                     <option value="">Sort by ...</option>
-                    <option value="title">Titlle (A-Z)</option>
+                    <option value="title">Title (A-Z)</option>
                     <option value="pages">Pages</option>
                     <option value="date">Date Added</option>
                 </select>
@@ -36,13 +36,13 @@
                 </form>
 
                 <div style="margin-top: 1rem;">
-                    <button id="exportBtn">Export JSON</button>
-                    <input type="file" id="importFile" accept=".json">
+                    <h2>Export</h2><button id="exportBtn">Export JSON</button>
+                    <h2>Import</h2><button><input type="file" id="importFile" accept=".json"></button>
                 </div>
             </section>
 
             <section>
-                <h2>Dashboard & Catalog</h2>
+                <h2>Dashboard</h2>
                 <div id="liveMsg" style="margin-bottom: 0.5rem;font-weight: bold;"></div>
                 <p>Total Books: <span id="statTotal">0</span> | Total Pages: <span id="statPages">0</span></p>
                 
