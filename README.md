@@ -2,6 +2,9 @@
 
 A lightweight web application for managing your personal book library, notes, and reading progress efficiently. Built with modern JavaScript (ES modules) and styled with clean CSS, it stores your data securely right inside your browser's local storage.
 
+## Video :
+  |https://youtu.be/ijKUpJu1h-U|
+
 ---
 
 ## Features
