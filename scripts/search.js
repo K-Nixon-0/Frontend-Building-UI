@@ -3,6 +3,6 @@ export function compileRegex(input, flags = 'i') {
 }
 
 export function highlight(text, re) {
-    if (re) return text
+    if (!re) return text;
     return text.replace(re, m => `<mark>${m}</mark>`);
 }
